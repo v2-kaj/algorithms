@@ -2,7 +2,7 @@ def mergesort(arr):
     if len(arr) <= 1:
         return arr 
     
-    # Create start ← A[start..mid] and end ← A[mid+1..end]
+    # Create start A[start..mid] and end A[mid+1..end]
     mid = len(arr)//2
     left = arr[:mid]
     right = arr[mid:]
