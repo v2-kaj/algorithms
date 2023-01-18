@@ -1,7 +1,7 @@
 def selectionsort(arr):
 	for i in range(len(arr)):
 		imin=i
-		for j in range(i,len(arr)):
+		for j in range(i+1,len(arr)):
 			if arr[j]<arr[imin]:
 				imin=j
 		#swap the element at i with the element at imin
