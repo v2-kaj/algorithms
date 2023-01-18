@@ -13,8 +13,8 @@ def mergesort(arr):
 
     i = j = k = 0
 
-    # Until we reach the end of either left or right, pick larger among
-    # elements start and end and place them in the correct position in the sorted array
+    # Until we reach the end of either left or right,
+	# pick the smaller element and put it into the final sorted arr
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             arr[k] = left[i]
@@ -25,7 +25,7 @@ def mergesort(arr):
         k += 1
 
     # When all elements are traversed in either left or right,
-    # pick up the remaining elements and put in sorted array
+    # pick up the remaining elements and put in sorted arr
     while i < len(left):
         arr[k] = left[i]
         i += 1
