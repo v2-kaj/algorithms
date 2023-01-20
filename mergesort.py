@@ -7,7 +7,7 @@ def mergesort(arr):
     left = arr[:mid]
     right = arr[mid:]
 
-    # Sort the two halves
+    # Recursively sort the two halves
     mergesort(left)
     mergesort(right)
 
@@ -25,7 +25,7 @@ def mergesort(arr):
         k += 1
 
     # When all elements are traversed in either left or right,
-    # pick up the remaining elements and put in sorted arr
+    # pick up the remaining elements and put them in the sorted arr
     while i < len(left):
         arr[k] = left[i]
         i += 1
