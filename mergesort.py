@@ -1,16 +1,4 @@
-def mergesort(arr):
-    if len(arr) <= 1:
-        return arr 
-    
-    # Create start A[start..mid] and end A[mid+1..end]
-    mid = len(arr)//2
-    left = arr[:mid]
-    right = arr[mid:]
-
-    # Recursively sort the two halves
-    mergesort(left)
-    mergesort(right)
-
+def merge(arr,left,right):
     i = j = k = 0
 
     # Until we reach the end of either left or right,
@@ -35,5 +23,19 @@ def mergesort(arr):
         arr[k] = right[j]
         j += 1
         k += 1
+	
+def mergesort(arr):
+    if len(arr) <= 1:
+        return arr 
+    
+    # Create start A[start..mid] and end A[mid+1..end]
+    mid = len(arr)//2
+    left = arr[:mid]
+    right = arr[mid:]
+
+    # Recursively sort the two halves
+    mergesort(left)
+    mergesort(right)
+    merge(arr,left,right)
     return arr
  
