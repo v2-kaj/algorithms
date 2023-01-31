@@ -27,15 +27,14 @@ def merge(arr,left,right):
 def mergesort(arr):
     if len(arr) <= 1:
         return arr 
-    
     # Create start A[start..mid] and end A[mid+1..end]
     mid = len(arr)//2
     left = arr[:mid]
     right = arr[mid:]
-
     # Recursively sort the two halves
     mergesort(left)
     mergesort(right)
+	# Merge the left and right arrays	
     merge(arr,left,right)
     return arr
  
