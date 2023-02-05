@@ -7,7 +7,8 @@ def partition (a, start, end):
         if (a[j] <= pivot):  
             i = i + 1  
             a[i], a[j] = a[j], a[i]  
-      
+
+    # insert the pivot element into its proper position  
     a[i+1], a[end] = a[end], a[i+1]  
   
     return (i + 1)  
