@@ -36,3 +36,18 @@ a1_weight = example2_undirected['A']['1']
 # to access the weight of 2 to B which is 3
 twob = example2_undirected['2']['B'] 
 
+"""
+Example 3
+a---b---d
+|   |
+c---
+
+"""
+g3 = {
+        'a':['b', 'c'],
+        'b':['a', 'c', 'd'],
+        'c':['a', 'b'],
+        'd':['b'],
+    }
+# adjacent to b
+print(g3["b"])
