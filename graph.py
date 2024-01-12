@@ -50,4 +50,16 @@ g3 = {
         'd':['b'],
     }
 # adjacent to b
-print(g3["b"])
+#print(g3["b"])
+"""
+Example 4
+a to c and b
+b to d
+c to d
+d to e
+"""
+
+
+
+# all vertices adjacent to a
+#print(g4.get('a'))

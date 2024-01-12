@@ -13,12 +13,14 @@ def bfs(graph, start):
 
 # Example usage
 g3 = {
-    'a': ['b'],
-    'b': ['c', 'd' ],
-    'c': ['f'],
-    'd': ['e'],
+    'a': ['b', 'c'],
+    'b': ['d', 'e', 'f'],
+    'c': ['h'],
+    'd': [],
     'e': [],
-    'f': [],
+    'f': ['g'],
+    'g': [],
+    'h': ['g']
 }
 
 start_vertex = 'a'
