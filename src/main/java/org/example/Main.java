@@ -1,12 +1,13 @@
 package org.example;
 
 import DynamicConnectivity.QuickFindUF;
+import DynamicConnectivity.QuickUnionUF;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        QuickFindUF uf = new QuickFindUF(10);
+        QuickUnionUF uf = new QuickUnionUF(10);
         uf.union(4, 3);
         uf.union(3, 8);
         uf.union(6, 5);
