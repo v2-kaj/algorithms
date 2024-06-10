@@ -1,23 +1,42 @@
 package DynamicConnectivity;
 
 public class QuickUnionUF implements UF{
-    private int[] id;
+    private final int[] roots;
     public QuickUnionUF(int N){
-        id = new int[N];
-        for(int i=0;i<id.length;i++){
-            id[i]=i;
+        roots= new int[N];
+        for(int i=0;i<roots.length;i++){
+            roots[i]=i;
+        }
+    }  private int root(int k) throws IndexOutOfBoundsException {
+        try{
+            while(k!=roots[k]) k=roots[k];
+            return k;
+        }catch(IndexOutOfBoundsException e){
+            throw new IndexOutOfBoundsException(k+" not in the graph");
+        }
+
+    }
+
+
+
+    public boolean connected(int p, int r){
+        try{
+            return root(p)==root(r);
+        }catch (IndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+            return false;
+        }
+
+    }
+
+    public void union(int p, int r){
+        try {
+            int rp = root(p);
+            int rr = root(r);
+            roots[rp] = rr;
+        }catch(IndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
         }
     }
-    private int root(int i){
-        while(i != id[i]) i=id[i];
-        return i;
-    }
-    public boolean connected(int p, int q){
-        return root(p)==root(q);
-    }
-    public void union(int p, int q){
-        int rp = root(p);
-        int rq = root(q);
-        id[rp]=rq;
-    }
+
 }
